@@ -6,6 +6,7 @@ carts:
   update_qty_min: 1
   update_qty_max: 10
 paginate: 8
+trending_products: 8
 order:
   ship_method:
     quick_ship: 1

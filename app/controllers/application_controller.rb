@@ -8,6 +8,10 @@ class ApplicationController < ActionController::Base
     redirect_to root_path
   end
 
+  rescue_from ActiveRecord::RecordNotFound do
+    redirect_to root_path
+  end
+
   protected
 
   def configure_permitted_parameters

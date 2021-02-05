@@ -3,6 +3,7 @@ class Order < ApplicationRecord
   has_many :products, through: :order_details
   accepts_nested_attributes_for :order_details
   belongs_to :user
+  delegate :email, to: :user, prefix: true
   enum status: {waiting: 0,
                 confirmed: 1,
                 delivering: 2,
