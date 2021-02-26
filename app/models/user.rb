@@ -12,7 +12,7 @@ class User < ApplicationRecord
   validates :email, presence: true,
             format: {with: VALID_EMAIL_REGEX}, uniqueness: true
   validates :password, presence: true
-
+  
   private
 
   def downcase_email
